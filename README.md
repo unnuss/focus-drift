@@ -68,7 +68,7 @@ All analysis is session-scoped and behavior-based.
 
 The repository is organized by system responsibility:
 
-focus-drift /
+focus-drift/n
 ├── extension/ # Browser event collection
 ├── backend/ # Feature extraction and inference
 ├── model/ # Training and evaluation
