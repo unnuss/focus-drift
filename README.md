@@ -67,8 +67,8 @@ All analysis is session-scoped and behavior-based.
 ## Project Structure
 
 The repository is organized by system responsibility:
-
-focus-drift/n
+'''
+focus-drift/
 ├── extension/ # Browser event collection
 ├── backend/ # Feature extraction and inference
 ├── model/ # Training and evaluation
@@ -76,7 +76,7 @@ focus-drift/n
 ├── docs/ # Architecture and design decisions
 └── README.md
 
-
+'''
 Each component has a single responsibility and communicates through well-defined interfaces.
 
 ---
