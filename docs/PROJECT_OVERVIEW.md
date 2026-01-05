@@ -237,7 +237,8 @@ This structure reflects system boundaries, not convenience.
 
 focus-drift/
 
-├── extension/                  # Browser event collection
+├── extension/     # Browser event collection
+
 │   ├── background.js
 │   ├── popup.html
 │   ├── popup.js
