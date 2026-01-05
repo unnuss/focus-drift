@@ -57,7 +57,8 @@ Each event represents one browser interaction.
 }
 ```
 3️⃣ Event Field Rules (STRICT)
-timestamp
+
+*timestamp*
 
 UTC only
 
@@ -65,7 +66,7 @@ Millisecond precision preferred
 
 Must be monotonic within a session
 
-event_type
+*event_type*
 
 Allowed values only:
 
@@ -79,7 +80,7 @@ TAB_REMOVED — tab closed
 
 No custom or inferred events allowed.
 
-tab_id
+*tab_id*
 
 Randomized identifier
 
@@ -91,13 +92,13 @@ Not persistent across sessions
 
 Purpose: enable relative behavior analysis, not tracking.
 
-window_id
+*window_id*
 
 Same rules as tab_id
 
 Used only to detect focus shifts between windows
 
-domain
+*domain*
 
 Coarse-grained domain only
 Examples:
