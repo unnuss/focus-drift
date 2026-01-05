@@ -236,6 +236,7 @@ AI is a translator, not a decision-maker.
 This structure reflects system boundaries, not convenience.
 
 focus-drift/
+
 ├── extension/                  # Browser event collection
 │   ├── background.js
 │   ├── popup.html
