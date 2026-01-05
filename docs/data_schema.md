@@ -58,7 +58,7 @@ Each event represents one browser interaction.
 ```
 3️⃣ Event Field Rules (STRICT)
 
-*timestamp*
+**timestamp**
 
 UTC only
 
@@ -66,7 +66,7 @@ Millisecond precision preferred
 
 Must be monotonic within a session
 
-*event_type*
+**event_type**
 
 Allowed values only:
 
@@ -80,7 +80,7 @@ TAB_REMOVED — tab closed
 
 No custom or inferred events allowed.
 
-*tab_id*
+**tab_id**
 
 Randomized identifier
 
@@ -92,92 +92,92 @@ Not persistent across sessions
 
 Purpose: enable relative behavior analysis, not tracking.
 
-*window_id*
+**window_id**
 
 Same rules as tab_id
 
 Used only to detect focus shifts between windows
 
-*domain*
+**domain**
 
 Coarse-grained domain only
 Examples:
 
-youtube.com
-
-docs.google.com
-
-stackoverflow.com
+  youtube.com
+  
+  docs.google.com
+  
+  stackoverflow.com
 
 Never store:
 
-Full URLs
+  Full URLs
+  
+  Query parameters
+  
+  Page titles
 
-Query parameters
-
-Page titles
-
-null if domain is not applicable to the event
+  null if domain is not applicable to the event
 
 4️⃣ Ordering & Integrity Rules
 
-Events must be chronologically ordered
+  Events must be chronologically ordered
+  
+  No event reordering in backend
+  
+  No inferred or synthesized events
 
-No event reordering in backend
-
-No inferred or synthesized events
-
-Missing events are allowed; fabricated events are not
+  Missing events are allowed; fabricated events are not
 
 5️⃣ Explicit Privacy Guarantees (NON-NEGOTIABLE)
 
-This schema explicitly forbids collecting:
-
-Page content
-
-Page titles
-
-URLs
-
-Keystrokes
-
-Mouse movement
-
-User identifiers
-
-Persistent device identifiers
-
-Background activity outside sessions
-
-If data is not listed in this schema, it must not be collected.
+  This schema explicitly forbids collecting:
+  
+  Page content
+  
+  Page titles
+  
+  URLs
+  
+  Keystrokes
+  
+  Mouse movement
+  
+  User identifiers
+  
+  Persistent device identifiers
+  
+  Background activity outside sessions
+  
+  If data is not listed in this schema, it must not be collected.
 
 6️⃣ Downstream Usage (IMPORTANT)
-What this schema is used for:
-
-Deterministic feature extraction
-
-Attention drift modeling
-
-Session visualization
-
-What this schema is NOT used for:
-
-Content understanding
-
-User profiling
-
-Surveillance
-
-Productivity judgment
+  What this schema is used for:
+  
+  Deterministic feature extraction
+  
+  Attention drift modeling
+  
+  Session visualization
+  
+  What this schema is NOT used for:
+  
+  Content understanding
+  
+  User profiling
+  
+  Surveillance
+  
+  Productivity judgment
 
 7️⃣ Change Policy
 
-Any change to this schema requires:
-
-Team discussion
-
-Documentation update
-
-Explicit agreement from all contributors
-
-No silent changes.
+  Any change to this schema requires:
+  
+  Team discussion
+  
+  Documentation update
+  
+  Explicit agreement from all contributors
+  
+  No silent changes.
