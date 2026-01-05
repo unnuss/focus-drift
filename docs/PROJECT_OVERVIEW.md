@@ -236,30 +236,28 @@ AI is a translator, not a decision-maker.
 This structure reflects system boundaries, not convenience.
 
 focus-drift/
-
-├── extension/     # Browser event collection
-
+├ ── extension/     # Browser event collection
 │   ├── background.js
 │   ├── popup.html
 │   ├── popup.js
 │   └── manifest.json
 │
-├── backend/                    # Core processing logic
+├ ── backend/                    # Core processing logic
 │   ├── api.py                  # API endpoints
 │   ├── data_schema.py          # Event & metric schemas
 │   ├── feature_extraction.py   # Deterministic metrics
 │   ├── inference.py            # Model inference logic
 │   └── attention_model.py      # Model loading
 │
-├── model/                      # Training & evaluation
+├ ── model/                      # Training & evaluation
 │   ├── train.py
 │   ├── evaluate.py
 │   └── model.pkl
 │
-├── dashboard/                  # Visualization
+├ ── dashboard/                  # Visualization
 │   └── app.py
 │
-├── docs/                       # Project reasoning
+├ ── docs/                       # Project reasoning
 │   ├── problem.md
 │   ├── architecture.md
 │   ├── metrics.md
