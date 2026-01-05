@@ -26,12 +26,12 @@ Each browsing session is treated as an isolated unit.
   "events": [ EventObject ]
 }
 ```
-Field Definitions
-Field	Description
-session_id	Random UUID generated at session start
-start_time	Timestamp when user manually starts session
-end_time	Timestamp when user manually ends session
-events	Ordered list of browser interaction events
+Field Definitions: Field	Description
+session_id: Random UUID generated at session start
+start_time: Timestamp when user manually starts session
+end_time:	Timestamp when user manually ends session
+events:	Ordered list of browser interaction events
+
 Session Guarantees
 
 Sessions are manually started and ended
