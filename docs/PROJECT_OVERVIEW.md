@@ -16,7 +16,6 @@ We are building:
 A behavioral signal processing system that models how attention degrades 
 over time and explains why. 
 Everything in the project must support this goal. 
-
 2. The Core Problem We Are Solving 
 Most tools answer: 
 ● “How long did you work?” 
@@ -28,21 +27,19 @@ People often feel distracted but cannot explain:
 ● Whether it was gradual or sudden 
 ● Whether it was interruptions or fragmentation 
 Focus Drift exists to make this invisible behavior visible. 
-
 3. Fundamental Design Principles (LOCK THESE IN) 
 Every design decision must respect these principles: 
-  1. Behavior, not content 
-  We analyze how the browser is used, never what is viewed. 
-  2. Explainability over complexity 
-  Every metric and decision must be explainable to a human. 
-  3. Privacy by design 
-  Privacy is enforced technically, not promised verbally. 
-  4. Deterministic first, learned second 
-  Metrics are deterministic; learning happens on top of them. 
-  5. No judgment 
-  The system describes behavior; it does not moralize it. 
-  If a feature violates even one of these, it does not belong. 
-
+1. Behavior, not content 
+We analyze how the browser is used, never what is viewed. 
+2. Explainability over complexity 
+Every metric and decision must be explainable to a human. 
+3. Privacy by design 
+Privacy is enforced technically, not promised verbally. 
+4. Deterministic first, learned second 
+Metrics are deterministic; learning happens on top of them. 
+5. No judgment 
+The system describes behavior; it does not moralize it. 
+If a feature violates even one of these, it does not belong. 
 4. High-Level System Overview 
 The system is composed of four layers, each with a single responsibility: 
 Browser Interaction Events 
@@ -54,113 +51,113 @@ Trained Attention Drift Model
 Human-Readable Insight + Visualization 
 No layer skips another. 
 No layer does someone else’s job. 
-
 5. Detailed Component Breakdown 
-  5.1 Chrome Extension — Event Collection Layer 
-  Purpose: 
-  Collect raw browser interaction events during a manually started session. 
-  What it tracks: 
-  ● Tab switches 
-  ● Window focus changes 
-  ● Tab creation and removal 
-  ● Timestamps 
-  ● Coarse domain identifier (not full URLs) 
-  What it explicitly does NOT track: 
-  ● Page content 
-  ● Keystrokes 
-  ● Mouse movements 
-  ● Background activity 
-  ● User identity 
-  Key constraints: 
-  ● User must manually start and end a session 
-  ● No tracking outside active sessions 
-  ● Data is session-scoped 
-  The extension is dumb by design. 
-  It only collects events and sends them forward. 
-  
-  5.2 Feature Extraction — Behavioral Signal Layer 
-  Purpose: 
-  Convert raw interaction events into meaningful behavioral metrics. 
-  This layer is fully deterministic. 
-  Core metrics (final set): 
-  ● Session duration 
-  ● Time-to-First-Switch (TTFS) 
-  ● Average uninterrupted focus block length 
-  ● Tab switch rate 
-  ● Switch burst count (rapid switching clusters) 
-  ● Return switching ratio (A → B → A patterns) 
-  These metrics are: 
-  ● Auditable 
-  ● Explainable 
-  ● Independent of AI 
-  This layer represents our engineering depth. 
-  
-  5.3 Attention Drift Model — Learning Layer 
-  Purpose: 
-  Map behavioral metrics → attention state using a trained, interpretable model. 
-  Model type (locked decision): 
-  ● Logistic Regression or 
-  ● Decision Tree 
-  Why a model is used: 
-  ● Attention drift is multi-dimensional 
-  ● Hard thresholds are arbitrary 
-  ● Signals interact non-linearly 
-  ● A model learns relative importance 
-  What the model predicts: 
-  ● Session state: 
-  ○ Focused 
-  ○ Interrupted 
-  ○ Fragmented 
-  What the model does NOT do: 
-  ● See raw events 
-  ● Analyze content 
-  ● Replace metrics 
-  ● Make moral judgments 
-  The model improves consistency, not magic intelligence. 
-  
-  5.4 Insight & Visualization — Interpretation Layer 
-  Purpose: 
-  Explain why the session behaved the way it did. 
-  Outputs: 
-  ● Session classification 
-  ● Key contributing metrics 
-  ● Attention timeline visualization 
-  ● Short explanatory summary 
-  Optional AI usage: 
-  ● An LLM may be used ONLY to convert: 
-  metrics + model output → natural language explanation 
-  AI is NOT allowed to: 
-  ● Decide session state 
-  ● Analyze behavior 
-  ● Infer intent 
-  ● Override the model 
-  AI is a translator, not a decision-maker. 
-
+5.1 Chrome Extension — Event Collection Layer 
+Purpose: 
+Collect raw browser interaction events during a manually started session. 
+What it tracks: 
+● Tab switches 
+● Window focus changes 
+● Tab creation and removal 
+● Timestamps 
+● Coarse domain identifier (not full URLs) 
+What it explicitly does NOT track: 
+● Page content 
+● Keystrokes 
+● Mouse movements 
+● Background activity 
+● User identity 
+Key constraints: 
+● User must manually start and end a session 
+● No tracking outside active sessions 
+● Data is session-scoped 
+The extension is dumb by design. 
+It only collects events and sends them forward. 
+5.2 Feature Extraction — Behavioral Signal Layer 
+Purpose: 
+Convert raw interaction events into meaningful behavioral metrics. 
+This layer is fully deterministic. 
+Core metrics (final set): 
+● Session duration 
+● Time-to-First-Switch (TTFS) 
+● Average uninterrupted focus block length 
+● Tab switch rate 
+● Switch burst count (rapid switching clusters) 
+● Return switching ratio (A → B → A patterns) 
+These metrics are: 
+● Auditable 
+● Explainable 
+● Independent of AI 
+This layer represents our engineering depth. 
+5.3 Attention Drift Model — Learning Layer 
+Purpose: 
+Map behavioral metrics → attention state using a trained, interpretable model. 
+Model type (locked decision): 
+● Logistic Regression or 
+● Decision Tree 
+Why a model is used: 
+● Attention drift is multi-dimensional 
+● Hard thresholds are arbitrary 
+● Signals interact non-linearly 
+● A model learns relative importance 
+What the model predicts: 
+● Session state: 
+○ Focused 
+○ Interrupted 
+○ Fragmented 
+What the model does NOT do: 
+● See raw events 
+● Analyze content 
+● Replace metrics 
+● Make moral judgments 
+The model improves consistency, not magic intelligence. 
+5.4 Insight & Visualization — Interpretation Layer 
+Purpose: 
+Explain why the session behaved the way it did. 
+Outputs: 
+● Session classification 
+● Key contributing metrics 
+● Attention timeline visualization 
+● Short explanatory summary 
+Optional AI usage: 
+● An LLM may be used ONLY to convert: 
+metrics + model output → natural language explanation 
+AI is NOT allowed to: 
+● Decide session state 
+● Analyze behavior 
+● Infer intent 
+● Override the model 
+AI is a translator, not a decision-maker. 
 6. GitHub Repository Structure (FINAL) 
 This structure reflects system boundaries, not convenience. 
 focus-drift/ 
-├── extension/                # Browser event collection   
+├── extension/                  
 │   ├── background.js 
 │   ├── popup.html 
 │   ├── popup.js 
 │   └── manifest.json 
 │ 
-├── backend/                   # Core processing logic  
-│   ├── api.py                 # API endpoints
-│   ├── data_schema.py         # Event & metric schemas  
+├── backend/                    
+│   ├── api.py                  
+│   ├── data_schema.py          
+# Browser event collection 
+# Core processing logic 
+# API endpoints 
+# Event & metric schemas 
 │   ├── feature_extraction.py   # Deterministic metrics 
-│   ├── inference.py            # Model inference logic 
+│   ├── inference.py            
+# Model inference logic 
 │   └── attention_model.py      # Model loading 
 │ 
-├── model/                    # Training & evaluation  
+├── model/                      
 │   ├── train.py 
 │   ├── evaluate.py 
 │   └── model.pkl 
 │ 
-├── dashboard/                  # Visualization
+├── dashboard/                  
 │   └── app.py 
 │ 
-├── docs/                     # Project reasoning  
+├── docs/                       
 │   ├── problem.md 
 │   ├── architecture.md 
 │   ├── metrics.md 
@@ -169,9 +166,10 @@ focus-drift/
 │   └── limitations.md 
 │ 
 └── README.md 
-
+# Training & evaluation 
+# Visualization 
+# Project reasoning 
 No file should exist without a clear reason. 
-
 7. Team Alignment & Responsibility Split 
 Each person owns one layer, but understands all layers. 
 ● Extension Owner 
@@ -198,10 +196,4 @@ Every team member must agree to this sentence:
 “We are building a behavior-aware system that explains attention drift using 
 deterministic metrics and a small trained model, while preserving privacy and 
 explainability.” 
-If someone disagrees with this, we resolve it now, not later. 
-10. Next Immediate Actions 
-1. Confirm model choice (logistic regression or decision tree) 
-2. Assign owners to each system layer 
-3. Create GitHub repo with this structure 
-4. Add this document to /docs/PROJECT_OVERVIEW.md 
-Only after this do we write the public README.
+If someone disagrees with this, we resolve it now, not later.
