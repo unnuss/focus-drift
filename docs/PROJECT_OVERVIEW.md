@@ -234,7 +234,7 @@ AI is a translator, not a decision-maker.
 6. GitHub Repository Structure (FINAL)
 
 This structure reflects system boundaries, not convenience.
-
+```
 focus-drift/
 ├ ── extension/     # Browser event collection
 │   ├── background.js
@@ -266,7 +266,7 @@ focus-drift/
 │   └── limitations.md
 │
 └── README.md
-
+```
 
 No file should exist without a clear reason.
 
