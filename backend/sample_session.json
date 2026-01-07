@@ -1,154 +1,246 @@
 {
-    "session_id": "c2f9df73-1628-4f6c-a3ab-84d4363e5e57",
-    "start_time": "2026-01-07T03:34:57.340Z",
-    "end_time": "2026-01-07T03:36:37.556Z",
+    "session_id": "596fef5a-9ffc-4191-a860-fce714eea815",
+    "start_time": "2026-01-07T23:17:32.432Z",
+    "end_time": "2026-01-07T23:24:26.813Z",
     "events": [
         {
-            "timestamp": "2026-01-07T03:35:10.963Z",
+            "domain": null,
             "event_type": "WINDOW_FOCUS",
             "tab_id": null,
-            "window_id": "569706512",
-            "domain": null
+            "timestamp": "2026-01-07T23:17:36.458Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:26.517Z",
+            "domain": null,
+            "event_type": "TAB_CREATED",
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:17:43.928Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
             "event_type": "TAB_SWITCH",
-            "tab_id": "569706615",
-            "window_id": "569706512",
-            "domain": "www.youtube.com"
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:17:43.928Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:29.407Z",
+            "domain": null,
+            "event_type": "TAB_CREATED",
+            "tab_id": "569708449",
+            "timestamp": "2026-01-07T23:17:46.022Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
             "event_type": "TAB_SWITCH",
-            "tab_id": "569706611",
-            "window_id": "569706512",
-            "domain": "www.linkedin.com"
+            "tab_id": "569708449",
+            "timestamp": "2026-01-07T23:17:46.023Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:31.364Z",
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:17:49.892Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:17:51.503Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
+            "event_type": "TAB_CREATED",
+            "tab_id": "569708452",
+            "timestamp": "2026-01-07T23:19:51.136Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
             "event_type": "TAB_SWITCH",
-            "tab_id": "569706624",
-            "window_id": "569706512",
-            "domain": "www.linkedin.com"
+            "tab_id": "569708452",
+            "timestamp": "2026-01-07T23:19:51.137Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:33.661Z",
+            "domain": null,
             "event_type": "TAB_REMOVED",
-            "tab_id": "569706624",
-            "window_id": "569706512",
-            "domain": null
+            "tab_id": "569708449",
+            "timestamp": "2026-01-07T23:19:52.073Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:33.676Z",
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:19:58.756Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:20:00.333Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": "www.youtube.com",
             "event_type": "TAB_SWITCH",
-            "tab_id": "569706615",
-            "window_id": "569706512",
-            "domain": "www.youtube.com"
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:20:05.923Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:35.346Z",
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:21:00.949Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:21:02.554Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
             "event_type": "TAB_CREATED",
-            "tab_id": "569706632",
-            "window_id": "569706512",
-            "domain": null
+            "tab_id": "569708456",
+            "timestamp": "2026-01-07T23:21:18.546Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:35.374Z",
+            "domain": null,
             "event_type": "TAB_SWITCH",
-            "tab_id": "569706632",
-            "window_id": "569706512",
-            "domain": null
+            "tab_id": "569708456",
+            "timestamp": "2026-01-07T23:21:18.546Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:47.091Z",
-            "event_type": "TAB_CREATED",
-            "tab_id": "569706635",
-            "window_id": "569706512",
-            "domain": null
-        },
-        {
-            "timestamp": "2026-01-07T03:35:47.127Z",
+            "domain": "www.youtube.com",
             "event_type": "TAB_SWITCH",
-            "tab_id": "569706635",
-            "window_id": "569706512",
-            "domain": null
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:21:22.132Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:49.979Z",
+            "domain": null,
             "event_type": "TAB_SWITCH",
-            "tab_id": "569706632",
-            "window_id": "569706512",
-            "domain": "www.instagram.com"
+            "tab_id": "569708456",
+            "timestamp": "2026-01-07T23:21:23.044Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:51.156Z",
+            "domain": "www.youtube.com",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:21:26.650Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": "open.spotify.com",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569708456",
+            "timestamp": "2026-01-07T23:21:27.983Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": "www.youtube.com",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:21:33.262Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": "open.spotify.com",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569708456",
+            "timestamp": "2026-01-07T23:21:37.523Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:21:39.796Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:21:42.981Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": "www.youtube.com",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:21:46.782Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": "open.spotify.com",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569708456",
+            "timestamp": "2026-01-07T23:21:48.235Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": "www.youtube.com",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:21:54.614Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": "open.spotify.com",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569708456",
+            "timestamp": "2026-01-07T23:21:57.217Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:22:00.958Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "timestamp": "2026-01-07T23:22:02.550Z",
+            "window_id": "569708397"
+        },
+        {
+            "domain": null,
             "event_type": "TAB_REMOVED",
-            "tab_id": "569706632",
-            "window_id": "569706512",
-            "domain": null
+            "tab_id": "569708446",
+            "timestamp": "2026-01-07T23:22:23.754Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:35:51.160Z",
-            "event_type": "TAB_SWITCH",
-            "tab_id": "569706635",
-            "window_id": "569706512",
-            "domain": null
-        },
-        {
-            "timestamp": "2026-01-07T03:36:10.187Z",
-            "event_type": "TAB_CREATED",
-            "tab_id": "569706639",
-            "window_id": "569706512",
-            "domain": null
-        },
-        {
-            "timestamp": "2026-01-07T03:36:10.192Z",
-            "event_type": "TAB_SWITCH",
-            "tab_id": "569706639",
-            "window_id": "569706512",
-            "domain": null
-        },
-        {
-            "timestamp": "2026-01-07T03:36:12.529Z",
-            "event_type": "TAB_CREATED",
-            "tab_id": "569706640",
-            "window_id": "569706512",
-            "domain": null
-        },
-        {
-            "timestamp": "2026-01-07T03:36:12.573Z",
-            "event_type": "TAB_SWITCH",
-            "tab_id": "569706640",
-            "window_id": "569706512",
-            "domain": null
-        },
-        {
-            "timestamp": "2026-01-07T03:36:15.591Z",
-            "event_type": "TAB_SWITCH",
-            "tab_id": "569706639",
-            "window_id": "569706512",
-            "domain": null
-        },
-        {
-            "timestamp": "2026-01-07T03:36:17.864Z",
-            "event_type": "TAB_SWITCH",
-            "tab_id": "569706640",
-            "window_id": "569706512",
-            "domain": null
-        },
-        {
-            "timestamp": "2026-01-07T03:36:30.141Z",
+            "domain": null,
             "event_type": "WINDOW_FOCUS",
             "tab_id": null,
-            "window_id": "569706512",
-            "domain": null
+            "timestamp": "2026-01-07T23:23:02.128Z",
+            "window_id": "569708397"
         },
         {
-            "timestamp": "2026-01-07T03:36:35.280Z",
+            "domain": null,
             "event_type": "WINDOW_FOCUS",
             "tab_id": null,
-            "window_id": "569706512",
-            "domain": null
+            "timestamp": "2026-01-07T23:23:48.208Z",
+            "window_id": "569708397"
         }
     ]
 }
+
