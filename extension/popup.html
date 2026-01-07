@@ -3,10 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <title>Focus Drift</title>
+    <style>
+      body { font-family: Arial, sans-serif; padding: 10px; width: 240px; }
+      button { width: 100%; margin: 6px 0; padding: 10px; cursor: pointer; }
+      #status { margin-top: 8px; font-size: 12px; opacity: 0.85; }
+    </style>
   </head>
   <body>
     <button id="startBtn">Start Session</button>
     <button id="endBtn">End Session</button>
+    <div id="status">Status: checking…</div>
 
     <script src="popup.js"></script>
   </body>

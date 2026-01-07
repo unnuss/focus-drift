@@ -11,14 +11,24 @@ import {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === "START_SESSION") {
-    startSession();
-    sendResponse({ status: "started" });
+    startSession().then((status) => {
+      sendResponse({ status });
+    });
     return true;
   }
 
   if (message.type === "END_SESSION") {
-    const session = endSession();
-    sendResponse({ status: "ended", session });
+    endSession().then((result) => {
+      // result can be {status: "..."} or {status: "...", session: {...}}
+      sendResponse(result);
+    });
+    return true;
+  }
+
+  if (message.type === "GET_STATUS") {
+    isSessionActive().then((active) => {
+      sendResponse({ active });
+    });
     return true;
   }
 });
@@ -29,33 +39,38 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 // TAB CREATED
 chrome.tabs.onCreated.addListener((tab) => {
-  if (!isSessionActive()) return;
+  isSessionActive().then((active) => {
+    if (!active) return;
 
-  logEvent({
-    timestamp: new Date().toISOString(),
-    event_type: "TAB_CREATED",
-    tab_id: String(tab.id),
-    window_id: String(tab.windowId),
-    domain: null
+    logEvent({
+      timestamp: new Date().toISOString(),
+      event_type: "TAB_CREATED",
+      tab_id: tab?.id != null ? String(tab.id) : null,
+      window_id: tab?.windowId != null ? String(tab.windowId) : null,
+      domain: null
+    });
   });
 });
 
 // TAB REMOVED
 chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
-  if (!isSessionActive()) return;
+  isSessionActive().then((active) => {
+    if (!active) return;
 
-  logEvent({
-    timestamp: new Date().toISOString(),
-    event_type: "TAB_REMOVED",
-    tab_id: String(tabId),
-    window_id: String(removeInfo.windowId),
-    domain: null
+    logEvent({
+      timestamp: new Date().toISOString(),
+      event_type: "TAB_REMOVED",
+      tab_id: tabId != null ? String(tabId) : null,
+      window_id: removeInfo?.windowId != null ? String(removeInfo.windowId) : null,
+      domain: null
+    });
   });
 });
 
 // TAB SWITCH
 chrome.tabs.onActivated.addListener(async (activeInfo) => {
-  if (!isSessionActive()) return;
+  const active = await isSessionActive();
+  if (!active) return;
 
   let domain = null;
   try {
@@ -72,20 +87,23 @@ chrome.tabs.onActivated.addListener(async (activeInfo) => {
     event_type: "TAB_SWITCH",
     tab_id: String(activeInfo.tabId),
     window_id: String(activeInfo.windowId),
-    domain: domain
+    domain
   });
 });
 
 // WINDOW FOCUS
 chrome.windows.onFocusChanged.addListener((windowId) => {
-  if (!isSessionActive()) return;
   if (windowId === chrome.windows.WINDOW_ID_NONE) return;
 
-  logEvent({
-    timestamp: new Date().toISOString(),
-    event_type: "WINDOW_FOCUS",
-    tab_id: null,
-    window_id: String(windowId),
-    domain: null
+  isSessionActive().then((active) => {
+    if (!active) return;
+
+    logEvent({
+      timestamp: new Date().toISOString(),
+      event_type: "WINDOW_FOCUS",
+      tab_id: null,
+      window_id: String(windowId),
+      domain: null
+    });
   });
 });

@@ -3,8 +3,7 @@
   "name": "Focus Drift (Dev)",
   "version": "0.1",
   "description": "Session-based browser interaction logger for Focus Drift.",
-  "permissions": ["tabs", "windows"]
-,
+  "permissions": ["tabs", "windows", "storage"],
   "background": {
     "service_worker": "background.js",
     "type": "module"
