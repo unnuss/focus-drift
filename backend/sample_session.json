@@ -1,0 +1,154 @@
+{
+    "session_id": "c2f9df73-1628-4f6c-a3ab-84d4363e5e57",
+    "start_time": "2026-01-07T03:34:57.340Z",
+    "end_time": "2026-01-07T03:36:37.556Z",
+    "events": [
+        {
+            "timestamp": "2026-01-07T03:35:10.963Z",
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:35:26.517Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706615",
+            "window_id": "569706512",
+            "domain": "www.youtube.com"
+        },
+        {
+            "timestamp": "2026-01-07T03:35:29.407Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706611",
+            "window_id": "569706512",
+            "domain": "www.linkedin.com"
+        },
+        {
+            "timestamp": "2026-01-07T03:35:31.364Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706624",
+            "window_id": "569706512",
+            "domain": "www.linkedin.com"
+        },
+        {
+            "timestamp": "2026-01-07T03:35:33.661Z",
+            "event_type": "TAB_REMOVED",
+            "tab_id": "569706624",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:35:33.676Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706615",
+            "window_id": "569706512",
+            "domain": "www.youtube.com"
+        },
+        {
+            "timestamp": "2026-01-07T03:35:35.346Z",
+            "event_type": "TAB_CREATED",
+            "tab_id": "569706632",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:35:35.374Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706632",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:35:47.091Z",
+            "event_type": "TAB_CREATED",
+            "tab_id": "569706635",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:35:47.127Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706635",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:35:49.979Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706632",
+            "window_id": "569706512",
+            "domain": "www.instagram.com"
+        },
+        {
+            "timestamp": "2026-01-07T03:35:51.156Z",
+            "event_type": "TAB_REMOVED",
+            "tab_id": "569706632",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:35:51.160Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706635",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:36:10.187Z",
+            "event_type": "TAB_CREATED",
+            "tab_id": "569706639",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:36:10.192Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706639",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:36:12.529Z",
+            "event_type": "TAB_CREATED",
+            "tab_id": "569706640",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:36:12.573Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706640",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:36:15.591Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706639",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:36:17.864Z",
+            "event_type": "TAB_SWITCH",
+            "tab_id": "569706640",
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:36:30.141Z",
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "window_id": "569706512",
+            "domain": null
+        },
+        {
+            "timestamp": "2026-01-07T03:36:35.280Z",
+            "event_type": "WINDOW_FOCUS",
+            "tab_id": null,
+            "window_id": "569706512",
+            "domain": null
+        }
+    ]
+}
